@@ -14,7 +14,7 @@ public class MainBT4 {
         user4.binhChon(Cadidate.TRUMP);
         user5.binhChon(Cadidate.TRUMP);
         user6.binhChon(Cadidate.BIDEN);
-        user1.binhChon(Cadidate.TRUMP);
+        user1.binhChon(Cadidate.BIDEN);
         Election.getInstance().InKetQua();
 
     }

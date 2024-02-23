@@ -15,14 +15,9 @@ public class Election {
         return election;
     }
     int trump = 0, biden = 0;
-    List<User> selectedUser = new ArrayList<User>();
-    public void binhChon(Cadidate binhChon, User user){
-        if(!selectedUser.contains(user)){
-            selectedUser.add(user);
+    public void binhChon(Cadidate binhChon){
             if (binhChon == Cadidate.TRUMP) trump++;
             else if (binhChon == Cadidate.BIDEN) biden++;
-        }
-
     }
 
     public void InKetQua(){

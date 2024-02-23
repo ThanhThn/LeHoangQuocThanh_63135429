@@ -14,8 +14,11 @@ public class User {
     public void setTen(String ten) {
         this.ten = ten;
     }
-
+    private boolean selectedUser = true;
     public void binhChon(Cadidate c){
-        Election.getInstance().binhChon(c, this);
+        if (selectedUser){
+            selectedUser = false;
+            Election.getInstance().binhChon(c);
+        }
     }
 }
