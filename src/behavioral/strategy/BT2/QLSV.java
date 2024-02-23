@@ -17,6 +17,7 @@ public class QLSV {
         }
     }
     public void sapXep(){
+
         if(soSanh != null) sinhViens.sort((o1, o2) -> soSanh.soSanh(o1, o2));
     }
     public void sapXep2(){
