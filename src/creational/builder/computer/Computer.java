@@ -23,7 +23,7 @@ public class Computer {
     public static class Builder{
         private String CPU, RAM, storage, screen;
 
-        // 5.xzhm Phương thức xây dựng môột thành phần của Computer
+        // 5. Phương thức xây dựng một thành phần của Computer
         public Builder addCPU(String CPU){
             this.CPU = CPU;
             return this;
