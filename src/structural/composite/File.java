@@ -7,7 +7,7 @@ public class File extends AbstractFile{
 
     @Override
     public String getStringTreeFolder() {
-        return ten;
+        return getStringTab() + ten + "\n";
     }
 
     @Override

@@ -20,6 +20,7 @@ public class Main {
         designPatten.addItem(creationalPattern);
         designPatten.addItem(structuralPattern);
         System.out.println(creationalPattern.getPath());
+        System.out.println(designPatten.getStringTreeFolder());
         System.out.println(data.getStringTreeFolder());
     }
 }

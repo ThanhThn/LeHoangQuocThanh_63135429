@@ -1,14 +1,21 @@
 package structural.composite;
 
 public abstract class AbstractFile {
-    String ten, ngayTao, duongDan;
-    protected String stringTab = "\t";
+    String ten, ngayTao, duongDan, stringTab = "";
 
 
     public AbstractFile(String ten, String ngayTao) {
         this.ten = ten;
         this.ngayTao = ngayTao;
         this.duongDan = ten;
+    }
+
+    public String getStringTab() {
+        return stringTab;
+    }
+
+    public void setStringTab(String stringTab) {
+        this.stringTab = stringTab;
     }
 
     public abstract String getStringTreeFolder();

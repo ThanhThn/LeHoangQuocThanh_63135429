@@ -12,10 +12,11 @@ public class Folder extends AbstractFile{
 
     @Override
     public String getStringTreeFolder() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(this.ten);
-        for(AbstractFile file:files)
-            builder.append("\n").append(stringTab).append(file.getStringTreeFolder());
+        StringBuilder builder = new StringBuilder(getStringTab() + ten + "\n");
+        for(AbstractFile file:files){
+            file.setStringTab(getStringTab() + "\t");
+            builder.append(file.getStringTreeFolder());
+        }
         return builder.toString();
     }
 
@@ -24,7 +25,6 @@ public class Folder extends AbstractFile{
     public void addItem(AbstractFile file) {
         files.add(file);
         file.duongDan = this.duongDan + "\\" + file.duongDan;
-        file.stringTab = this.stringTab + "\t";
     }
 
     @Override
