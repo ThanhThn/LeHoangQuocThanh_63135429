@@ -1,6 +1,6 @@
 package creational.factory.BT4;
 
-public class Rectangle {
+public class Rectangle extends Shape{
     private static Rectangle rectangle;
 
     private Rectangle(){}
@@ -10,5 +10,10 @@ public class Rectangle {
             rectangle = new Rectangle();
         }
         return rectangle;
+    }
+
+    @Override
+    public String draw() {
+        return brush + "\t" + paper + "\t" + frame;
     }
 }
