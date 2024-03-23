@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract ATM{
+- int menhGia;
+- ATM menhGiaThapHon;
++ abstract MenhGiaThapHon(ATM m): ATM
++ abstract SoToTien(int soTien) : String
+}
+
+
+ATM <|--- MenhGiaATM
+ATM <---* MenhGiaATM: menhGiaThapHon
+
+@enduml
