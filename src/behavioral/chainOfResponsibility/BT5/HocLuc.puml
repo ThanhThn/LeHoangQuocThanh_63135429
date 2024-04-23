@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class HocLuc{
+- float diemCaoNhat
+- String tenHocLuc
+# kiemTraHocLuc(float diem): String
+# hocLucCaoHon (HocLuc hocLucCaoHon): HocLuc
+}
+
+HocLuc <|--- HocLucBinhThuong
+HocLuc <|--- HocLucXuatSac
+HocLuc <---* HocLucBinhThuong: hocLucCaoHon
+
+@enduml

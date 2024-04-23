@@ -1,6 +1,6 @@
 package creational.builder.computer;
 // 1. Lớp có đối tượng cần xây dựng với nhiều thành phần
-public class Computer {
+public class   Computer {
     // 3. Các đối tượng thành phần cần xây dựng từ đối tượng builder. Không sử dụng bổ từ truy cập public
     String CPU, RAM, storage, screen;
     private Computer(Builder b){

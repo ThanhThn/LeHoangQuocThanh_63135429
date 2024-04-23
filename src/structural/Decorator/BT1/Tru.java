@@ -1,4 +1,4 @@
-package structural.BT1;
+package structural.Decorator.BT1;
 
 public class Tru extends BieuThucDecorator{
     float toanHang;

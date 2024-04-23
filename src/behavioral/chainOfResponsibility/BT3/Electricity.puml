@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class Electricity{
+   int giaDien
+   String tenBac
+   int mucTieuThuMin
+   int mucTieuThuMax
+   Electricity mucDienCaoHon
+   # tienDien(int soKW): int
+   # mucDienCaoHon(Electricity e): Electricity
+}
+
+Electricity <|-- MucDien
+Electricity <---* MucDien: mucDienCaoHon
+Electricity <|--- MucDienCaoNhat
+
+note bottom of MucDienCaoNhat
+    + Phương thức tính tiền điện
+            return (soKW  - mucTieuThuMin) * giaDien
+end note
+
+note bottom of MucDien
+    + Phương thức tính tiền điện:
+          Nếu soKW <= max:
+            return (soKW  - mucTieuThuMin) * giaDien
+          Ngược lại:
+            return (max - min) * gia + MucDien.tienDien(soKW)
+end note
+@enduml

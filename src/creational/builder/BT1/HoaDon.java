@@ -21,7 +21,6 @@ public class HoaDon {
     private HoaDon(Builder b){
         this.hoaDonHeader = b.hoaDonHeader;
         this.cthds = b.cthds;
-
     }
     public static class  Builder{
         private List<CTHD> cthds = new ArrayList<CTHD>();

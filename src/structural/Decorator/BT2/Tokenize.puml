@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Tokenize{
+    List<String> tokenize()
+}
+
+abstract class TokenDecorator
+
+class TachTu{
+    # String s
+}
+note bottom of TokenDecorator
+    Viết phương thức khởi tạo biến tokens
+end note
+
+note left of TachTu
+    Viết phương thức khởi tạo biến s
+end note
+Tokenize <|... TachTu
+Tokenize <... TokenDecorator
+TokenDecorator --> Tokenize:tokens
+TokenDecorator <|--- RemoveStopWord
+TokenDecorator <|--- RemovePunctuation
+
+
+@enduml

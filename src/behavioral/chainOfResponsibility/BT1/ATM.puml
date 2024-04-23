@@ -8,8 +8,21 @@ abstract ATM{
 + abstract SoToTien(int soTien) : String
 }
 
+abstract ChuoiMenhGiaFactory{
+# ATM getChuoiMenhGia(int menhGia)
++ void rutTien(int menhGiaThapHon)
+}
 
 ATM <|--- MenhGiaATM
 ATM <---* MenhGiaATM: menhGiaThapHon
+ATM <... ChuoiMenhGiaFactory
+ChuoiMenhGiaVND ----|> ChuoiMenhGiaFactory
+ChuoiMenhGiaVND *---> ATM:"menhGia500,\nmenhGia100,\n...\nmenhGia1"
 
+note top of ChuoiMenhGiaVND
+    + Tạo các đối tượng ATM theo mệnh giá tiền Việt Nam
+    + Kết nối các đối tượng này thành chuỗi trong phương thức khởi tạo
+    + Phương thức getChuoiMenhGia trả về
+        đối tượng kiểu ATM trong chuỗi ứng với giá trị đầu vào
+end note
 @enduml

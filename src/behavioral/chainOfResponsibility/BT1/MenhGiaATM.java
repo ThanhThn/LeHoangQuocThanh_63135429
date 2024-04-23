@@ -19,7 +19,7 @@ public class MenhGiaATM extends ATM{
         StringBuilder builder = new StringBuilder();
         int soToTien = soTien / menhGia;
         if(soToTien != 0){
-            builder.append(soToTien).append(" to ").append(menhGia).append("ngan").append("\n");
+            builder.append(soToTien).append(" to ").append(menhGia).append(" ngan").append("\n");
         }
         int tienThua = soTien - (soToTien * menhGia);
         if (this.menhGiaThapHon == null){

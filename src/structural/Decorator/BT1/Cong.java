@@ -1,4 +1,4 @@
-package structural.BT1;
+package structural.Decorator.BT1;
 
 public class Cong extends BieuThucDecorator{
     float toanHang;
