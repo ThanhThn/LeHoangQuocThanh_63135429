@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ArrayObject{
+    + getItem(int i): Object
+    + count(): int
+    + createIterator(): Iterator
+}
+
+abstract class Iterator{
+   + abstract First(): Object
+   + abstract Next():Object
+   + abstract isDone(): bool
+   + abstract currentItem():Object
+}
+
+class ConcreteIterator{
+   + First(): Object
+   + Next():Object
+   + isDone(): bool
+   + currentItem():Object
+}
+
+Iterator <|--- ConcreteIterator
+ConcreteIterator ----> ArrayObject
+ArrayObject ....> ConcreteIterator
+
+note top of Iterator
+    Lê Hoàng Quốc Thanh
+    MSSV: 63135429
+end note
+
+@enduml
