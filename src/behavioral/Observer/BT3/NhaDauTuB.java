@@ -1,4 +1,4 @@
-package behavioral.Observer;
+package behavioral.Observer.BT3;
 
 public class NhaDauTuB implements TiGia.TiGiaObserver {
     TiGia t;

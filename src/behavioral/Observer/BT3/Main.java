@@ -1,4 +1,4 @@
-package behavioral.Observer;
+package behavioral.Observer.BT3;
 
 public class Main {
     public static void main(String[] args) {

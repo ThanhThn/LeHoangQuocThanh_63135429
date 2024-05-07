@@ -1,4 +1,4 @@
-package behavioral.Observer;
+package behavioral.Observer.BT3;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Button{
+     +void addActivity(IActivity activity)
+     +void callActivity()
+}
+class Activity{
+    - int count = 0
+}
+interface IActivity{
+    +void onClick()
+}
+
+Button --> IActivity:activity
+Activity <|... IActivity
+Button <-- Activity:button
+@enduml
